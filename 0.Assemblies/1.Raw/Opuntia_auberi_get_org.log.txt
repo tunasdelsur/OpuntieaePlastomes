@@ -1,0 +1,127 @@
+
+GetOrganelle v1.7.3.5
+
+get_organelle_from_reads.py assembles organelle genomes from genome skimming data.
+Find updates in https://github.com/Kinggerm/GetOrganelle and see README.md for more information.
+
+Python 3.8.8 | packaged by conda-forge | (default, Feb 20 2021, 16:22:27)  [GCC 9.3.0]
+PLATFORM: Linux c0710a-s16.ufhpc 3.10.0-1062.18.1.el7.x86_64 #1 SMP Wed Feb 12 14:08:31 UTC 2020 x86_64 x86_64
+PYTHON LIBS: GetOrganelleLib 1.7.3.5; numpy 1.20.1; sympy 1.7.1; scipy 1.6.1
+DEPENDENCIES: Bowtie2 2.4.2; SPAdes 3.13.0; Blast 2.11.0
+GETORG_PATH=/data/reference/getorganelle/
+SEED  DB: embplant_pt 0.0.1; embplant_mt 0.0.1
+LABEL DB: embplant_pt 0.0.1; embplant_mt 0.0.1
+WORKING DIR: /blue/soltis/mkohler/de_novo_plastomes/0.Opuntieae/Opuntia/auberi
+/apps/getorganelle/1.7.3.5/bin/get_organelle_from_reads.py -1 ../..//Opuntia_auberi_1990_0701_0201_1.fastq.gz -2 ../..//Opuntia_auberi_1990_0701_0201_2.fastq.gz -o plastome_output_k115-127-w57 -R 15 -k 21,45,65,85,105,115,117,125,127 -F embplant_pt -w 57
+
+2021-11-22 22:33:17,247 - INFO: Pre-reading fastq ...
+2021-11-22 22:33:17,247 - INFO: Estimating reads to use ... (to use all reads, set '--reduce-reads-for-coverage inf --max-reads inf')
+2021-11-22 22:33:17,320 - INFO: Tasting 100000+100000 reads ...
+2021-11-22 22:33:42,020 - INFO: Estimating reads to use finished.
+2021-11-22 22:33:42,021 - INFO: Unzipping reads file: ../..//Opuntia_auberi_1990_0701_0201_1.fastq.gz (612945489 bytes)
+2021-11-22 22:33:54,378 - INFO: Unzipping reads file: ../..//Opuntia_auberi_1990_0701_0201_2.fastq.gz (523725283 bytes)
+2021-11-22 22:34:06,048 - INFO: Counting read qualities ...
+2021-11-22 22:34:06,152 - INFO: Identified quality encoding format = Illumina 1.8+
+2021-11-22 22:34:06,152 - INFO: Phred offset = 33
+2021-11-22 22:34:06,153 - INFO: Trimming bases with qualities (0.00%): 33..33  !
+2021-11-22 22:34:06,188 - INFO: Mean error rate = 0.004
+2021-11-22 22:34:06,188 - INFO: Counting read lengths ...
+2021-11-22 22:34:16,927 - INFO: Mean = 151.0 bp, maximum = 151 bp.
+2021-11-22 22:34:16,927 - INFO: Reads used = 7491367+7491367
+2021-11-22 22:34:16,927 - INFO: Pre-reading fastq finished.
+
+2021-11-22 22:34:16,927 - INFO: Making seed reads ...
+2021-11-22 22:34:16,976 - INFO: Making seed - bowtie2 index ...
+2021-11-22 22:34:23,107 - INFO: Making seed - bowtie2 index finished.
+2021-11-22 22:34:23,107 - INFO: Mapping reads to seed bowtie2 index ...
+2021-11-22 22:39:31,398 - INFO: Mapping finished.
+2021-11-22 22:39:31,399 - INFO: Seed reads made: plastome_output_k115-127-w57/seed/embplant_pt.initial.fq (128419042 bytes)
+2021-11-22 22:39:31,400 - INFO: Making seed reads finished.
+
+2021-11-22 22:39:31,400 - INFO: Checking seed reads and parameters ...
+2021-11-22 22:39:42,240 - INFO: Estimated embplant_pt-hitting base-coverage = 144.94
+2021-11-22 22:39:42,523 - INFO: Setting '--max-extending-len inf'
+2021-11-22 22:39:42,922 - INFO: Checking seed reads and parameters finished.
+
+2021-11-22 22:39:42,922 - INFO: Making read index ...
+2021-11-22 22:40:52,585 - INFO: 9075971 candidates in all 14982734 reads
+2021-11-22 22:40:52,598 - INFO: Pre-grouping reads ...
+2021-11-22 22:40:52,598 - INFO: Setting '--pre-w 57'
+2021-11-22 22:40:53,154 - INFO: 200000/2820329 used/duplicated
+2021-11-22 22:41:12,092 - INFO: 9419 groups made.
+2021-11-22 22:41:12,936 - INFO: Making read index finished.
+
+2021-11-22 22:41:12,936 - INFO: Extending ...
+2021-11-22 22:41:12,936 - INFO: Adding initial words ...
+2021-11-22 22:41:22,932 - INFO: AW 4610404
+2021-11-22 22:42:41,804 - INFO: Round 1: 9075971/9075971 AI 657498 AW 22628094
+2021-11-22 22:44:01,796 - INFO: Round 2: 9075971/9075971 AI 1508051 AW 55045946
+2021-11-22 22:45:09,628 - INFO: Round 3: 9075971/9075971 AI 1925713 AW 75349396
+2021-11-22 22:46:11,515 - INFO: Round 4: 9075971/9075971 AI 2165195 AW 87272422
+2021-11-22 22:47:06,867 - INFO: Round 5: 9075971/9075971 AI 2314753 AW 94596460
+2021-11-22 22:48:00,912 - INFO: Round 6: 9075971/9075971 AI 2412935 AW 99205476
+2021-11-22 22:48:53,670 - INFO: Round 7: 9075971/9075971 AI 2479152 AW 102251532
+2021-11-22 22:49:45,735 - INFO: Round 8: 9075971/9075971 AI 2524203 AW 104289996
+2021-11-22 22:50:36,833 - INFO: Round 9: 9075971/9075971 AI 2556794 AW 105749312
+2021-11-22 22:51:28,298 - INFO: Round 10: 9075971/9075971 AI 2578596 AW 106729182
+2021-11-22 22:52:19,758 - INFO: Round 11: 9075971/9075971 AI 2593752 AW 107397698
+2021-11-22 22:53:11,095 - INFO: Round 12: 9075971/9075971 AI 2604565 AW 107886754
+2021-11-22 22:54:01,446 - INFO: Round 13: 9075971/9075971 AI 2612594 AW 108255382
+2021-11-22 22:54:51,684 - INFO: Round 14: 9075971/9075971 AI 2618546 AW 108528552
+2021-11-22 22:55:41,990 - INFO: Round 15: 9075971/9075971 AI 2623044 AW 108727286
+2021-11-22 22:55:41,991 - INFO: Hit the round limit 15 and terminated ...
+2021-11-22 22:56:05,298 - INFO: Extending finished.
+
+2021-11-22 22:56:05,932 - INFO: Separating filtered fastq file ... 
+2021-11-22 22:56:13,925 - INFO: Setting '-k 21,45,65,85,105,115,117,125,127'
+2021-11-22 22:56:13,925 - INFO: Assembling using SPAdes ...
+2021-11-22 22:56:13,966 - INFO: spades.py -t 1  --phred-offset 33 -1 plastome_output_k115-127-w57/filtered_1_paired.fq -2 plastome_output_k115-127-w57/filtered_2_paired.fq --s1 plastome_output_k115-127-w57/filtered_1_unpaired.fq --s2 plastome_output_k115-127-w57/filtered_2_unpaired.fq -k 21,45,65,85,105,115,117,125,127 -o plastome_output_k115-127-w57/filtered_spades
+2021-11-23 01:03:14,193 - INFO: Insert size = 472.939, deviation = 122.643, left quantile = 339, right quantile = 635
+2021-11-23 01:03:14,215 - INFO: Assembling finished.
+
+2021-11-23 01:03:31,123 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K127/assembly_graph.fastg finished!
+2021-11-23 01:03:38,126 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K125/assembly_graph.fastg finished!
+2021-11-23 01:03:46,836 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K117/assembly_graph.fastg finished!
+2021-11-23 01:03:54,685 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K115/assembly_graph.fastg finished!
+2021-11-23 01:04:03,374 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K105/assembly_graph.fastg finished!
+2021-11-23 01:04:27,842 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K85/assembly_graph.fastg finished!
+2021-11-23 01:05:30,001 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K65/assembly_graph.fastg finished!
+2021-11-23 01:06:56,190 - INFO: Slimming plastome_output_k115-127-w57/filtered_spades/K45/assembly_graph.fastg finished!
+2021-11-23 01:06:56,190 - INFO: Slimming assembly graphs finished.
+
+2021-11-23 01:06:56,191 - INFO: Extracting embplant_pt from the assemblies ...
+2021-11-23 01:06:56,194 - INFO: Disentangling plastome_output_k115-127-w57/filtered_spades/K127/assembly_graph.fastg.extend-embplant_pt-embplant_mt.fastg as a circular genome ... 
+2021-11-23 01:07:02,474 - INFO: Vertex_9714596 #copy = 2
+2021-11-23 01:07:02,474 - INFO: Vertex_9798806 #copy = 2
+2021-11-23 01:07:02,475 - INFO: Vertex_9845270 #copy = 4
+2021-11-23 01:07:02,475 - INFO: Vertex_9851742 #copy = 1
+2021-11-23 01:07:02,475 - INFO: Vertex_9874638 #copy = 1
+2021-11-23 01:07:02,475 - INFO: Vertex_9876040_9867022_9847660 #copy = 2
+2021-11-23 01:07:02,475 - INFO: Vertex_9876950 #copy = 1
+2021-11-23 01:07:02,475 - INFO: Vertex_9876996_9864384_9866600_9842974_9862868_9814386_9877148_9864932_9882382_9838896_9881460_9851378_9769316_9847850_9861746_9831408 #copy = 1
+2021-11-23 01:07:02,475 - INFO: Vertex_9877310_9869446_9874750_9859690 #copy = 2
+2021-11-23 01:07:02,475 - INFO: Vertex_9883200 #copy = 1
+2021-11-23 01:07:02,475 - INFO: Vertex_9883202 #copy = 2
+2021-11-23 01:07:02,475 - INFO: Vertex_9883234_9862182_9883252_9881308_9882414_9836640_9881674_9872064_9881434_9725098_9883222_9702894_9876898 #copy = 1
+2021-11-23 01:07:02,475 - INFO: Average embplant_pt kmer-coverage = 136.3
+2021-11-23 01:07:02,475 - INFO: Average embplant_pt base-coverage = 823.5
+2021-11-23 01:07:02,475 - INFO: Writing output ...
+2021-11-23 01:07:02,514 - WARNING: Multiple repeat patterns appeared in your data, a more balanced pattern (always the repeat_pattern1) would be suggested for plastomes with the canonical IR!
+2021-11-23 01:07:02,514 - WARNING: Multiple circular genome structures produced!
+2021-11-23 01:07:02,514 - WARNING: Please check the existence of those isomers by using reads mapping (library information) or longer reads.
+2021-11-23 01:07:02,795 - INFO: Detecting large repeats (>1000 bp) in PATH1 with IRs detected, Total:LSC:SSC:Repeat(bp) = 138379:101064:4107:16604
+2021-11-23 01:07:02,796 - INFO: Writing PATH1 of complete embplant_pt to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.1.repeat_pattern1.path_sequence.fasta
+2021-11-23 01:07:02,798 - INFO: Writing PATH2 of complete embplant_pt to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.2.repeat_pattern1.path_sequence.fasta
+2021-11-23 01:07:02,800 - INFO: Writing PATH3 of complete embplant_pt to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.3.repeat_pattern2.path_sequence.fasta
+2021-11-23 01:07:02,802 - INFO: Writing PATH4 of complete embplant_pt to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.4.repeat_pattern2.path_sequence.fasta
+2021-11-23 01:07:02,803 - INFO: Writing PATH5 of complete embplant_pt to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.5.repeat_pattern2.path_sequence.fasta
+2021-11-23 01:07:02,805 - INFO: Writing PATH6 of complete embplant_pt to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.6.repeat_pattern2.path_sequence.fasta
+2021-11-23 01:07:02,805 - INFO: Writing GRAPH to plastome_output_k115-127-w57/embplant_pt.K127.complete.graph1.selected_graph.gfa
+2021-11-23 01:07:02,845 - INFO: Result status of embplant_pt: circular genome
+2021-11-23 01:07:02,984 - INFO: Please visualize plastome_output_k115-127-w57/filtered_K127.assembly_graph.fastg.extend-embplant_pt-embplant_mt.fastg using Bandage to confirm the final result.
+2021-11-23 01:07:02,984 - INFO: Writing output finished.
+2021-11-23 01:07:02,985 - INFO: Extracting embplant_pt from the assemblies finished.
+
+
+Total cost 9227.77 s
+Thank you!
