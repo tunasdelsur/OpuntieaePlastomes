@@ -1,0 +1,145 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=43;
+	taxlabels
+	Brasiliopuntia_brasiliensis
+	Brasiliopuntia_schulzii
+	Consolea_macracantha
+	Consolea_moniliformis
+	Consolea_rubescens
+	Miqueliopuntia_miquelii
+	Opuntia_arechavaletae
+	Opuntia_auberi
+	Opuntia_aureispina
+	Opuntia_austrina
+	Opuntia_basilaris
+	Opuntia_caracassana
+	Opuntia_chisosensis
+	Opuntia_chlorotica
+	Opuntia_colubrina
+	Opuntia_cuija
+	Opuntia_dejecta
+	Opuntia_drummondii
+	Opuntia_gaumeri
+	Opuntia_guatemalensis
+	Opuntia_jamaicensis
+	Opuntia_macbridei
+	Opuntia_macrocentra
+	Opuntia_macrorhiza
+	Opuntia_mesacantha
+	Opuntia_microdasys
+	Opuntia_pachyrrhiza
+	Opuntia_polyacantha
+	Opuntia_pycnantha
+	Opuntia_quimilo
+	Opuntia_quitensis
+	Opuntia_retrorsa
+	Opuntia_rufida
+	Opuntia_scheerii
+	Opuntia_setispina
+	Opuntia_stenopetala
+	Opuntia_strigil
+	Salmonopuntia_salmiana
+	Salmonopuntia_schickendantzii
+	Tacinga_palmadora
+	Tacinga_saxatilis
+	Tunilla_erectoclada
+	Tunilla_soerhensii
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] (Brasiliopuntia_brasiliensis:8.1E-5,((((Consolea_rubescens:1.7E-5,Consolea_moniliformis:1.7E-5)[&label=100]:1.07E-4,Consolea_macracantha:6.7E-5)[&label=100]:0.00597,(((((((Opuntia_pycnantha:0.001722,((Opuntia_microdasys:3.09E-4,Opuntia_rufida:5.9E-5)[&label=100]:0.00173,(Opuntia_pachyrrhiza:1.55E-4,Opuntia_stenopetala:5.27E-4)[&label=100]:9.95E-4)[&label=97]:2.58E-4)[&label=100]:0.001206,(Opuntia_basilaris:0.004997,Opuntia_polyacantha:0.020569)[&label=100]:0.002818)[&label=99]:7.87E-4,((((Opuntia_macrorhiza:0.001056,(Opuntia_mesacantha:7.1E-5,(Opuntia_austrina:3.7E-5,Opuntia_drummondii:3.3E-5)[&label=96]:5.2E-5)[&label=100]:4.5E-4)[&label=100]:9.71E-4,((((Opuntia_chisosensis:1.0E-6,Opuntia_macrocentra:1.7E-5)[&label=61]:1.0E-6,Opuntia_aureispina:9.0E-6)[&label=100]:3.87E-4,Opuntia_chlorotica:3.13E-4)[&label=99]:1.71E-4,Opuntia_strigil:7.25E-4)[&label=100]:2.68E-4)[&label=100]:3.35E-4,Opuntia_setispina:9.57E-4)[&label=100]:0.002255,(Opuntia_cuija:9.38E-4,Opuntia_scheerii:5.65E-4)[&label=100]:0.001646)[&label=100]:0.001677)[&label=96]:6.15E-4,((Opuntia_gaumeri:2.7E-4,(Opuntia_dejecta:1.8E-5,Opuntia_auberi:1.0E-6)[&label=100]:1.92E-4)[&label=100]:1.98E-4,(Opuntia_guatemalensis:2.26E-4,(Opuntia_jamaicensis:9.0E-6,Opuntia_caracassana:2.7E-5)[&label=100]:1.87E-4)[&label=100]:2.73E-4)[&label=100]:9.62E-4)[&label=100]:0.001312,(Opuntia_quimilo:0.003008,(Opuntia_arechavaletae:6.95E-4,(Opuntia_colubrina:1.22E-4,Opuntia_retrorsa:6.8E-5)[&label=100]:0.002215)[&label=100]:7.26E-4)[&label=100]:9.82E-4)[&label=71]:2.08E-4,(Opuntia_quitensis:8.6E-5,Opuntia_macbridei:1.8E-5)[&label=100]:9.58E-4)[&label=100]:0.001264,(Miqueliopuntia_miquelii:0.001068,((Salmonopuntia_schickendantzii:6.19E-4,Salmonopuntia_salmiana:0.001023)[&label=100]:0.001706,(Tunilla_soerhensii:8.14E-4,Tunilla_erectoclada:7.69E-4)[&label=100]:0.002092)[&label=100]:2.99E-4)[&label=100]:0.001662)[&label=92]:8.23E-4)[&label=100]:0.001169,(Tacinga_saxatilis:0.001128,Tacinga_palmadora:9.52E-4)[&label=100]:0.00158)[&label=100]:0.001116,Brasiliopuntia_schulzii:6.0E-5);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#000000;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="Arial";
+	set branchLabels.fontSize=14;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="label";
+	set legend.fontSize=10.0;
+	set legend.isShown=false;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="label";
+	set nodeLabels.fontName="Arial";
+	set nodeLabels.fontSize=14;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=true;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=14.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="User selection";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="Arial";
+	set tipLabels.fontSize=12;
+	set tipLabels.fontStyle=2;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=true;
+	set trees.rootingType="User Selection";
+	set trees.transform=true;
+	set trees.transformType="cladogram";
+end;
+
